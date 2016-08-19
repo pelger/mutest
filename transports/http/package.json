@@ -1,0 +1,25 @@
+{
+  "name": "mu-http-transport",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "browser": "browser.js",
+  "scripts": {
+    "lint": "spacey-standard",
+    "test": "spacey-standard && node test",
+    "coverage": "istanbul cover test && open ./coverage/lcov-report/index.html",
+    "coverage-check": "istanbul cover test && istanbul check-coverage",
+    "commit-check": "npm run lint"
+  },
+  "author": "David Mark Clements",
+  "license": "MIT",
+  "dependencies": {
+    "xhr-request": "^1.0.1"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.3",
+    "pre-commit": "^1.1.1",
+    "spacey-standard": "^1.0.2",
+    "tape": "^4.2.0"
+  }
+}

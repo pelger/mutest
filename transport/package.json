@@ -1,0 +1,38 @@
+{
+  "name": "mu-transports",
+  "description": "transport drivers and adapters for mu",
+  "keywords": [
+    "mu",
+    "microservices",
+    "transport",
+    "driver",
+    "adapter"
+  ],
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Peter Elger (http://nearform.com/)",
+  "contributors": [
+    "Peter Elger <elger.peter@gmail.com> (http://peterelger.com/)"
+  ],
+  "main": "./transport.js",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apparatus/mu.git"
+  },
+  "scripts": {
+    "lint": "jshint **/*.js",
+    "test": "jshint **/*.js && tape **/*test/*Test.js",
+    "coverage": "istanbul cover test/*Test.js && open ./coverage/lcov-report/index.html",
+    "coverage-check": "istanbul cover test/*Test.js && istanbul check-coverage",
+    "commit-check": "jshint **/*.js && istanbul cover test/*Test.js && istanbul check-coverage"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.1-rc1",
+    "pre-commit": "^1.1.1",
+    "tape": "^4.6.0"
+  }
+}
